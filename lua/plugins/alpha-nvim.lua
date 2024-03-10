@@ -7,14 +7,15 @@ return {
     opts = function()
       local dashboard = require("alpha.themes.dashboard")
       local logo = [[
-        ▄▄   ▄▄ ▄▄▄▄▄▄ ▄▄    ▄ ▄▄▄▄▄▄▄    ▄▄▄     ▄▄▄ ▄▄▄   ▄▄▄
-        █  █ █  █      █  █  █ █       █  █   █   █   █  █  █ █      Z
-        █  █▄█  █  ▄   █   █▄█ █   ▄▄▄▄█  █   █   █   █   █▄█ █
-        █       █ █▄█  █       █  █  ▄▄   █   █   █   █       █    Z
-        █▄     ▄█      █  ▄    █  █ █  █  █   █▄▄▄█   █  ▄    █ z
-          █   █ █  ▄   █ █ █   █  █▄▄█ █  █       █   █ █ █   █
-          █▄▄▄█ █▄█ █▄▄█▄█  █▄▄█▄▄▄▄▄▄▄█  █▄▄▄▄▄▄▄█▄▄▄█▄█  █▄▄█
 
+     |      \        \    |  \     /  \/      \|  \  |  \         Z
+      \▓▓▓▓▓▓\▓▓▓▓▓▓▓▓    | ▓▓\   /  ▓▓  ▓▓▓▓▓▓\ ▓▓\ | ▓▓
+       | ▓▓    | ▓▓       | ▓▓▓\ /  ▓▓▓ ▓▓__| ▓▓ ▓▓▓\| ▓▓      Z
+       | ▓▓    | ▓▓       | ▓▓▓▓\  ▓▓▓▓ ▓▓    ▓▓ ▓▓▓▓\ ▓▓   z
+       | ▓▓    | ▓▓       | ▓▓\▓▓ ▓▓ ▓▓ ▓▓▓▓▓▓▓▓ ▓▓\▓▓ ▓▓
+      _| ▓▓_   | ▓▓       | ▓▓ \▓▓▓| ▓▓ ▓▓  | ▓▓ ▓▓ \▓▓▓▓
+     |   ▓▓ \  | ▓▓       | ▓▓  \▓ | ▓▓ ▓▓  | ▓▓ ▓▓  \▓▓▓
+      \▓▓▓▓▓▓   \▓▓        \▓▓      \▓▓\▓▓   \▓▓\▓▓   \▓▓
       ]]
 
       dashboard.section.header.val = vim.split(logo, "\n")
@@ -26,8 +27,8 @@ return {
         dashboard.button("g", " " .. "尋找文字", "<cmd> Telescope live_grep <cr>"),
         dashboard.button("c", " " .. "配置", "<cmd> lua require('lazyvim.util').telescope.config_files()() <cr>"),
         dashboard.button("s", " " .. "恢復會話", [[<cmd> lua require("persistence").load() <cr>]]),
-        dashboard.button("x", " " .. " Lazy 附加功能", "<cmd> LazyExtras <cr>"),
-        dashboard.button("l", "󰒲 " .. " Lazy", "<cmd> Lazy <cr>"),
+        dashboard.button("x", " " .. "附加功能", "<cmd> LazyExtras <cr>"),
+        dashboard.button("l", "󰒲 " .. "設定", "<cmd> Lazy <cr>"),
         dashboard.button("q", " " .. "離開", "<cmd> qa <cr>"),
       }
       for _, button in ipairs(dashboard.section.buttons.val) do
